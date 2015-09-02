@@ -1790,6 +1790,13 @@ h1:after {
 .shedule-b ul li:first-child {
 	border-top-width:0;
 }
+.shedule-b ul li a {
+	color:#000000;
+	text-decoration:none;
+}
+.shedule-b ul li a:hover {
+	text-decoration:underline;
+}
 .shedule-b ul li h6 {
 	position:absolute;
 	left:0;
