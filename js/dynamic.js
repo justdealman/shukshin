@@ -1,10 +1,10 @@
 ﻿function nav() {
 	var w = 0;
-	$('nav ul li').each(function() {
+	$('nav > ul > li').each(function() {
 		w = w+$(this).outerWidth();
 	});
-	var r = ($('nav ul').outerWidth()-w)/($('nav ul li').size()-1);
-	$('nav ul li').css({
+	var r = ($('nav > ul').outerWidth()-w)/($('nav > ul > li').size()-1);
+	$('nav > ul > li').css({
 		'margin-right': r+'px'
 	});
 }
@@ -137,6 +137,14 @@ $(document).ready(function() {
 			$(this).attr('placeholder', $(this).data('holder'));
 		});
 	});
+	$('nav > ul > li > ul').parent('li').hover(
+		function() {
+			$(this).children('ul').stop().slideDown(200);
+		},
+		function() {
+			$(this).children('ul').stop().slideUp(200);
+		}
+	);
 });
 $(window).load(function() {
 	nav();
