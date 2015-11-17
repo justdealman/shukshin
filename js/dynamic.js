@@ -76,7 +76,9 @@ $(document).ready(function() {
 			$(this).removeClass('active');
 		}
 		else {
-			t.stop().slideDown(200);
+			t.css({
+				'left': $(this).offset().position+'px'
+			}).stop().slideDown(200);
 			$(this).addClass('active');
 		}
 		event.preventDefault();
